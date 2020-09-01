@@ -1,0 +1,43 @@
+{
+  "npmScope": "rental",
+  "affected": {
+    "defaultBase": "master"
+  },
+  "implicitDependencies": {
+    "workspace.json": "*",
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    "tsconfig.base.json": "*",
+    "tslint.json": "*",
+    "nx.json": "*"
+  },
+  "tasksRunnerOptions": {
+    "default": {
+      "runner": "@nrwl/nx-cloud",
+      "options": {
+        "accessToken": "ZjhjM2IxYjItZDJiZC00NDMyLWEyNTItZWYyYWJlYzMwZmI4fHJlYWQtd3JpdGU=",
+        "cacheableOperations": [
+          "build",
+          "test",
+          "lint",
+          "e2e"
+        ],
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true
+      }
+    }
+  },
+  "projects": {
+    "rental": {
+      "tags": []
+    },
+    "rental-e2e": {
+      "tags": [],
+      "implicitDependencies": [
+        "rental"
+      ]
+    }
+  }
+}
